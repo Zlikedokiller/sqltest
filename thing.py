@@ -20,6 +20,6 @@ sock.close()
 # Traitement de la réponse pour récupérer l'heure
 time_str = response.split(" ")[2]
 time_list = time_str.split(":")
-current_time = str(datetime.datetime.utcnow().replace(hour=int(time_list[0]), minute=int(time_list[1]), second=int(time_list[2])))
+current_time = datetime.datetime.utcnow().replace(hour=int(time_list[0]), minute=int(time_list[1]), second=int(time_list[2]))
 
-print("L'heure publique est :", current_time)
+time = str("L'heure publique est :", current_time)
